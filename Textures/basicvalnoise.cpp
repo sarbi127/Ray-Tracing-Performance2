@@ -1,7 +1,7 @@
 #include "basicvalnoise.hpp"
 #include <algorithm>
 
-/// Constructor / destructor.
+// Constructor / destructor.
 qbRT::Texture::BasicValNoise::BasicValNoise()
 {
 	// Configure the noise generator.
