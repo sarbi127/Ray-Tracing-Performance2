@@ -104,4 +104,3 @@ bool qbRT::ObjPlane::TestIntersection(	const qbRT::Ray &castRay, qbRT::DATA::hit
 	
 	return false;
 }
-

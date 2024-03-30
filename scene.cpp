@@ -61,7 +61,7 @@ qbRT::Scene::Scene()
 																qbVector2<double>{std::vector<double>{1.0, 1.0}} );
 
 	auto sphereTexture = std::make_shared<qbRT::Texture::Image> (qbRT::Texture::Image());
-	sphereTexture -> LoadImage("C:/git/pic-bmp/BasketballColor.bmp");
+	sphereTexture -> LoadImage("C:/git/pic-bmp/tennis_sph.bmp");
 	sphereTexture -> SetTransform(	qbVector2<double>{std::vector<double>{0.0, 0.0}},
 																0.0,
 																qbVector2<double>{std::vector<double>{1.0, 1.0}} );
@@ -330,6 +330,7 @@ qbRT::Scene::Scene()
 											   qbVector3<double>{std::vector<double>{0.0, 0.0, 0.0}},
 											   qbVector3<double>{std::vector<double>{0.75, 0.75, 0.75}}});
 	ball -> AssignMaterial(sphereBodyMat);
+	ball -> m_uvMapType = qbRT::uvSPHERE;
 
 	auto donut = std::make_shared<qbRT::RM::Torus> (qbRT::RM::Torus());
 	donut -> m_tag = "donut";
@@ -339,7 +340,7 @@ qbRT::Scene::Scene()
 												qbVector3<double>{std::vector<double>{0.0, 0.0, 0.0}},
 												qbVector3<double>{std::vector<double>{0.75, 0.75, 0.75}}});
 	donut -> AssignMaterial(torusBodyMat);
-	//donut -> m_uvMapType = qbRT::uvSPHERE;
+	donut -> m_uvMapType = qbRT::uvSPHERE;
 
 	// **************************************************************************************
 	// Put the objects into the scene.	

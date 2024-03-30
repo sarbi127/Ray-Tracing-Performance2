@@ -45,4 +45,3 @@ void qbRT::Noise::NoiseBase::SetupGrid(int scale)
 
 
 
-

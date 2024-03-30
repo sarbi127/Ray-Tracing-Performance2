@@ -1,5 +1,7 @@
 #include "constant.hpp"
 
+#include "constant.hpp"
+
 // Constructor / destructor.
 qbRT::Normal::Constant::Constant()
 {

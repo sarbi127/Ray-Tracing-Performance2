@@ -3,8 +3,7 @@
 // Default constructor.
 qbRT::PointLight::PointLight()
 {
-	//m_color = qbVector3<double> {std::vector<double> {1.0, 1.0, 1.0}};
-	m_color = qbVector3<double> {1.0, 1.0, 1.0};
+	m_color = qbVector3<double> {std::vector<double> {1.0, 1.0, 1.0}};
 	m_intensity = 1.0;
 }
 
@@ -68,7 +67,7 @@ bool qbRT::PointLight::ComputeIllumination(	const qbVector3<double> &intPoint, c
 		double angle = acos(qbVector3<double>::dot(localNormal, lightDir));
 		
 		// If the normal is pointing away from the light, then we have no illumination.
-		if (angle > (M_PI/2.0))
+		if (angle > 1.5708)
 		{
 			// No illumination.
 			color = m_color;
@@ -79,7 +78,7 @@ bool qbRT::PointLight::ComputeIllumination(	const qbVector3<double> &intPoint, c
 		{
 			// We do have illumination.
 			color = m_color;
-			intensity = m_intensity * (1.0 - (2.0 * angle / M_PI));
+			intensity = m_intensity * (1.0 - (angle / 1.5708));
 			return true;
 		}
 	}
